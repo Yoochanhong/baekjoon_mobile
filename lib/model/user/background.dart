@@ -25,13 +25,13 @@ class Background {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['backgroundId'] = this.backgroundId;
-    data['backgroundImageUrl'] = this.backgroundImageUrl;
-    data['author'] = this.author;
-    data['authorUrl'] = this.authorUrl;
-    data['displayName'] = this.displayName;
-    data['displayDescription'] = this.displayDescription;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['backgroundId'] = backgroundId;
+    data['backgroundImageUrl'] = backgroundImageUrl;
+    data['author'] = author;
+    data['authorUrl'] = authorUrl;
+    data['displayName'] = displayName;
+    data['displayDescription'] = displayDescription;
     return data;
   }
 }
