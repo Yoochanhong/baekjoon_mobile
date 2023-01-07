@@ -19,11 +19,11 @@ class Badge {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['backgroundId'] = this.badgeId;
-    data['backgroundImageUrl'] = this.badgeImageUrl;
-    data['displayName'] = this.displayName;
-    data['displayDescription'] = this.displayDescription;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['backgroundId'] = badgeId;
+    data['backgroundImageUrl'] = badgeImageUrl;
+    data['displayName'] = displayName;
+    data['displayDescription'] = displayDescription;
     return data;
   }
 }
