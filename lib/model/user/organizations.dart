@@ -10,13 +10,13 @@ class Organizations {
 
   Organizations(
       {this.organizationId,
-        this.name,
-        this.type,
-        this.rating,
-        this.userCount,
-        this.voteCount,
-        this.solvedCount,
-        this.color});
+      this.name,
+      this.type,
+      this.rating,
+      this.userCount,
+      this.voteCount,
+      this.solvedCount,
+      this.color});
 
   Organizations.fromJson(Map<String, dynamic> json) {
     organizationId = json['organizationId'];
@@ -30,15 +30,15 @@ class Organizations {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['organizationId'] = this.organizationId;
-    data['name'] = this.name;
-    data['type'] = this.type;
-    data['rating'] = this.rating;
-    data['userCount'] = this.userCount;
-    data['voteCount'] = this.voteCount;
-    data['solvedCount'] = this.solvedCount;
-    data['color'] = this.color;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['organizationId'] = organizationId;
+    data['name'] = name;
+    data['type'] = type;
+    data['rating'] = rating;
+    data['userCount'] = userCount;
+    data['voteCount'] = voteCount;
+    data['solvedCount'] = solvedCount;
+    data['color'] = color;
     return data;
   }
 }
