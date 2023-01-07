@@ -83,33 +83,30 @@ class UserData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['handle'] = this.handle;
-    data['bio'] = this.bio;
-    if (this.organizations != null) {
-      data['organizations'] =
-          this.organizations!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['handle'] = handle;
+    data['bio'] = bio;
+    if (organizations != null) {
+      data['organizations'] = organizations!.map((v) => v.toJson()).toList();
     }
-    data['badge'] = this.badge;
-    if (this.background != null) {
-      data['background'] = this.background!.toJson();
-    }
-    data['profileImageUrl'] = this.profileImageUrl;
-    data['solvedCount'] = this.solvedCount;
-    data['voteCount'] = this.voteCount;
-    data['class'] = this.classRank;
-    data['classDecoration'] = this.classDecoration;
-    data['tier'] = this.tier;
-    data['rating'] = this.rating;
-    data['ratingByProblemsSum'] = this.ratingByProblemsSum;
-    data['ratingByClass'] = this.ratingByClass;
-    data['ratingBySolvedCount'] = this.ratingBySolvedCount;
-    data['ratingByVoteCount'] = this.ratingByVoteCount;
-    data['exp'] = this.exp;
-    data['rivalCount'] = this.rivalCount;
-    data['reverseRivalCount'] = this.reverseRivalCount;
-    data['maxStreak'] = this.maxStreak;
-    data['rank'] = this.rank;
+    data['badge'] = badge;
+    if (background != null) data['background'] = background!.toJson();
+    data['profileImageUrl'] = profileImageUrl;
+    data['solvedCount'] = solvedCount;
+    data['voteCount'] = voteCount;
+    data['class'] = classRank;
+    data['classDecoration'] = classDecoration;
+    data['tier'] = tier;
+    data['rating'] = rating;
+    data['ratingByProblemsSum'] = ratingByProblemsSum;
+    data['ratingByClass'] = ratingByClass;
+    data['ratingBySolvedCount'] = ratingBySolvedCount;
+    data['ratingByVoteCount'] = ratingByVoteCount;
+    data['exp'] = exp;
+    data['rivalCount'] = rivalCount;
+    data['reverseRivalCount'] = reverseRivalCount;
+    data['maxStreak'] = maxStreak;
+    data['rank'] = rank;
     return data;
   }
 }
